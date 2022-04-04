@@ -1,4 +1,4 @@
-# Cov-19
+<h1 align = "center">Cov-19</h1>
 This project is developed as an academic project for DBMS subject. It is Web Application based on management of Corona Vaccine which runs on localhost server.
 
 ### Prerequisites
