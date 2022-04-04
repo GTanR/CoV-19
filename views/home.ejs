@@ -1,0 +1,62 @@
+<%- include('partials/header'); -%>
+
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+
+<div class="px-3 mypage">
+    <b><h1 style="padding-left:9%;"></h1></b>
+ </div>
+
+ <div class="container fluid count">
+    <div class="row">
+      <div class="col-lg-4 text-center">
+        <img src="images/vaccine.png" class="img-fluid img">
+       <% if (count.count_vacc === undefined) count.count_vacc=0; %>
+        <h2>+<%= count.count_vacc %></h2>
+        <p>Students Have Been Registered.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 text-center">
+        <img src="images/doctor.png" class="img-fluid img">
+       <% if (count.count_hosp === undefined) count.count_hosp=0; %>
+        <h2>+<%= count.count_hosp %></h2>
+        <p>Hospitals Have Been Registered</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 text-center">
+        <img src="images/hospital.png" class="img-fluid img">
+       <% if (count.count_invent === undefined) count.count_invent=0; %>
+        <h2>+<%= count.count_invent %></h2>
+        <p>Inventories Have Been Connected</p>
+      </div>
+    </div>
+
+</div>
+
+<div class="bg-dark text-secondary px-4 py-5 text-center"  style="margin-bottom: 20vmin;">
+  <div class="py-5">
+    <h1 class="display-5 fw-bold text-white">Why Vaccinate?</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4" style="color:rgba(255,255,255,0.7);">Vaccination is a safe and effective way to prevent disease and save lives, now more than ever. When we get vaccinated, we aren’t just protecting ourselves, but also those around us.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<% for(var j=0;j<vaccine.length;j++){ %>
+  <div class="card text-center mx-auto" style="margin-top: 2vmin;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <div class="card-body">
+    <h1 class="card-title"><%= vaccine[j].H_vac %></h1>
+    <p class="card-text">
+      Number of students successfully registered
+    </p>
+    <h1 style="color: green">+<%= vaccine[j].count_ %></h1>
+  </div>
+</div>
+</div>
+<% } %>
+
+
+<script type="text/javascript" src="js/end.js"></script>
+<%- include('partials/footer'); -%>
