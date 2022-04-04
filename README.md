@@ -1,5 +1,5 @@
 <h1 align = "center">CoV-19</h1>
-This project is developed as an academic project for DBMS subject. It is Web Application based on management of Corona Vaccine which runs on localhost server.
+<h2 align = "center">This project is developed as an academic project for DBMS subject. It is Web Application based on management of Corona Vaccine which runs on localhost server.</h2>
 
 ### Prerequisites
 Must haves:
